@@ -1,0 +1,93 @@
+.appointment-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.appointment-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.appointment-id {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-of-type {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 80px;
+  font-size: 0.95rem;
+}
+
+.info-value {
+  color: #666;
+  text-align: right;
+  flex: 1;
+  word-break: break-word;
+}
+
+.card-footer {
+  padding: 15px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
