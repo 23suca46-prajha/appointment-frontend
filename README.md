@@ -62,3 +62,7 @@ frontend/
 - `npm build` - Creates a production build
 - `npm test` - Runs tests
 - `npm eject` - Ejects from create-react-app (irreversible)
+
+## PROJECT PRESENTATION
+
+[Download Project PPT]_(https://github.com/23suca46-cmyk/appointment-frontend/blob/main/Doctors-Appointment-Booking-System.pptx)
