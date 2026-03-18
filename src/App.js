@@ -4,7 +4,8 @@ import AppointmentForm from './components/AppointmentForm';
 import AppointmentList from './components/AppointmentList';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/appointments';
+// ✅ Correct backend URL
+const API_BASE_URL = 'https://appointment-backend-f4gzf7bnaqdwayad.southeastasia-01.azurewebsites.net/api/appointments';
 
 function App() {
   const [appointments, setAppointments] = useState([]);
