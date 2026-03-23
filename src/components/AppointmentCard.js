@@ -2,26 +2,14 @@ import React from 'react';
 import './AppointmentCard.css';
 
 function AppointmentCard({ appointment, onDelete }) {
-
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
   const handleDelete = () => {
-    // Step 1: Confirm deletion
-    const confirmDelete = window.confirm('Are you sure you want to delete this appointment?');
-
-    if (!confirmDelete) return;
-
-    // Step 2: Ask for password
-    const password = prompt('Enter password to confirm deletion:');
-
-    // Step 3: Check password
-    if (password === 'admin123') {   // 🔑 Change password if needed
+    if (window.confirm('Are you sure you want to delete this appointment?')) {
       onDelete(appointment.id);
-    } else {
-      alert('Incorrect password! Deletion cancelled.');
     }
   };
 
@@ -52,9 +40,7 @@ function AppointmentCard({ appointment, onDelete }) {
 
         <div className="info-row">
           <span className="info-label">Date:</span>
-          <span className="info-value">
-            {formatDate(appointment.appointmentDate)}
-          </span>
+          <span className="info-value">{formatDate(appointment.appointmentDate)}</span>
         </div>
 
         <div className="info-row">
@@ -71,9 +57,7 @@ function AppointmentCard({ appointment, onDelete }) {
       </div>
 
       <div className="card-footer">
-        <button className="delete-btn" onClick={handleDelete}>
-          Delete
-        </button>
+        <button className="delete-btn" onClick={handleDelete}>Delete</button>
       </div>
     </div>
   );
